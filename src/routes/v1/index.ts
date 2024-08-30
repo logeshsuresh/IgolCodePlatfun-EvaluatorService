@@ -1,4 +1,5 @@
 import express from "express";
+
 import { pingCheck } from "../../controllers/pingControllers";
 
 const v1Router = express.Router();
