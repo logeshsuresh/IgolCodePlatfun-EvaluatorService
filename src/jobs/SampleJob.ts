@@ -12,7 +12,10 @@ export default class SampleJob implements IJob {
     }
 
     handle = (job?: Job) => {
-        console.log(`handler of job ${job} called`);
+        console.log(job?.data);
+        if (job) {
+            console.log(`handler of job ${job.name} ${job.id} ${job.data} called`);
+        }
     };
 
     failed = (job?: Job) => {
